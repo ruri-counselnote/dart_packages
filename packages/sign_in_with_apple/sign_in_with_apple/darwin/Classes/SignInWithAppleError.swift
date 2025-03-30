@@ -114,8 +114,12 @@ public enum SignInWithAppleError {
                 errorCode = "authorization-error/notInteractive"
 #endif
 #if compiler(>=6.0)
-            case .matchedExcludedCredential:
-                errorCode = "authorization-error/matchedExcludedCredential"
+    case .matchedExcludedCredential:
+        errorCode = "authorization-error/matchedExcludedCredential"
+    case .credentialImport:
+        errorCode = "authorization-error/credentialImport"
+    case .credentialExport:
+        errorCode = "authorization-error/credentialExport"
 #endif
             @unknown default:
                 print("[SignInWithApplePlugin]: Unknown authorization error code: \(code)");
